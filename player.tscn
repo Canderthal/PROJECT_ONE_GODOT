@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dvcy4iw31thyd"]
+
+[ext_resource type="Texture2D" uid="uid://qo2tshmecg0e" path="res://assests/theguppy.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://c7vrhxeveotgy" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 16.03122
+
+[node name="player" type="CharacterBody2D" unique_id=1549621228 groups=["player"]]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2008385125]
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=398656773]
+shape = SubResource("CircleShape2D_g4v7s")

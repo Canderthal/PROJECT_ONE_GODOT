@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bdjtb74fvflyt"]
+
+[ext_resource type="Script" uid="uid://bo4ok78c5n1jh" path="res://power_cell.gd" id="1_tte6k"]
+[ext_resource type="Texture2D" uid="uid://d36mrbsrrxui1" path="res://assests/powercell.png" id="2_arxjx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 15.033297
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yf5fn"]
+radius = 74.06078
+
+[node name="powerCell" type="Area2D" unique_id=1828517454]
+script = ExtResource("1_tte6k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1661991837]
+texture = ExtResource("2_arxjx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=328182385]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="collection" type="Area2D" parent="." unique_id=857003125]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collection" unique_id=1053107793]
+shape = SubResource("CircleShape2D_yf5fn")
+debug_color = Color(0.85574114, 0.27584776, 0.6191582, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="collection" to="." method="_on_collection_body_entered"]
