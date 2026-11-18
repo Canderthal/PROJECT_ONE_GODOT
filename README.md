@@ -1,2 +1,1 @@
-# PROJECT_ONE_GODOT
-GPT godot learning project
+# PROJECT_ONE_GODO godot learning project
